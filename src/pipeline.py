@@ -22,6 +22,7 @@ from src.bayesian_network import train_retinal_bayesian_network
 from src.bayesian_inference import evaluate_test_set_inference
 from src.statistical_analysis import generate_feature_statistics, generate_correlation_matrix
 from src.mrf_inference import run_baseline_vs_mrf_experiment
+from src.visualization import main as render_figures
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 OUTPUTS_DIR = PROJECT_ROOT / "outputs"
@@ -94,6 +95,9 @@ def run_full_pipeline():
     final_master_path = OUTPUTS_DIR / "final_retinal_pgm_results.csv"
     final_master_df.to_csv(final_master_path, index=False)
     print(f"[Master Results] Final combined results table saved -> {final_master_path}")
+    
+    print("\n>>> [VISUALIZATION] Rendering result figures...")
+    render_figures()
     
     elapsed = time.time() - start_total
     print("\n================================================================================")

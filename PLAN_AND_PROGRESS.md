@@ -14,9 +14,37 @@
 
 | Phase | Target Completion | Current Status | Progress % | Primary Artifacts |
 | :--- | :---: | :---: | :---: | :--- |
-| **Phase 1: Ingestion, Preprocessing, Segmentation, Validation, Skeletons** | **100%** | **Completed** | **100%** | `dataset_manifest.csv`, 28 preprocessed images, 28 masks, `segmentation_metrics.csv`, 28 skeletons, 28 node maps |
-| **Phase 2: Graph Theory, Geometry, Fractals, Efficiency & Bayesian Networks** | **$\ge$85%** | **Completed** | **95%** | 56 graph files (JSON & GraphML), `retinal_network_features.csv`, 28 box-counting plots, learned CPTs JSON, posterior inference engine, stats |
-| **Phase 3: MRF Energy Model, Inference Optimization, Comparative Synthesis & Report** | **Remaining Scope (~15%)** | **Completed** | **90%** | MRF energy model, ICM engine, `baseline_vs_mrf_comparison.csv`, `final_retinal_pgm_results.csv`, demo notebook, README |
+| **Phase 1: Ingestion, Preprocessing, Segmentation, Validation, Skeletons** | **100%** | **Implemented** | **100%** | `dataset_manifest.csv`, 28 preprocessed images, 28 masks, `segmentation_metrics.csv`, 28 skeletons, 28 node maps, figures 01–05 |
+| **Phase 2: Graph Theory, Geometry, Fractals, Efficiency & Bayesian Networks** | **$\ge$85%** | **Implemented (quality issues noted below)** | **~85%** | graph files (JSON & GraphML), `retinal_network_features.csv`, box-counting plots, learned CPTs JSON, inference engine, figures 06–12 |
+| **Phase 3: MRF Energy Model, Inference Optimization, Comparative Synthesis & Report** | **Remaining scope** | **Implemented, not tuned** | **~50%** | MRF energy model, ICM engine, `baseline_vs_mrf_comparison.csv`, `final_retinal_pgm_results.csv`, figures 13–14 |
+
+## 1a. Measured Results (from `outputs/`, regenerate with `python -m src.pipeline`)
+
+| Metric | Train (20) | Test (8) |
+| :--- | :---: | :---: |
+| Accuracy vs Obs 1 | 0.879 | 0.890 |
+| Precision vs Obs 1 | 0.462 | 0.446 |
+| Recall vs Obs 1 | 0.783 | 0.782 |
+| Specificity vs Obs 1 | 0.890 | 0.901 |
+| F1 vs Obs 1 | 0.578 | 0.567 |
+| F1 vs Obs 2 | 0.549 | 0.587 |
+
+| Feature (all 28 images) | Mean ± Std |
+| :--- | :---: |
+| Nodes / Edges | 1498 ± 506 / 754 ± 252 |
+| Connected components | 751 ± 259 |
+| Mean tortuosity | 1.080 ± 0.013 |
+| Mean branch angle | 121.0° ± 2.0° |
+| Fractal dimension $D_f$ | 1.666 ± 0.049 |
+| Global efficiency | 0.0002 ± 0.0001 |
+| MRF test F1 vs baseline | 0.396 vs 0.567 (MRF is **worse**) |
+
+### Known Limitations (to fix next)
+1. **Over-segmentation:** precision ≈ 0.45, so false-positive speckle inflates node counts.
+2. **Fragmented graphs:** components ≈ edges (≈ 750), so most edges are isolated segments. Global efficiency and density are therefore very low and degree-2 merging / gap bridging is needed.
+3. **Branch angle (~121°)** comes from node-to-neighbour chord vectors over all incident pairs, not from parent/daughter branch vectors, so it is not comparable to Murray's ~75° yet.
+4. **Bayesian network label is circular:** `S` is defined by a rule over `B`, `T`, `D`, so 100% agreement is by construction (and only 2 of 28 images are `Complex`). A clinical or independent label is needed for a meaningful evaluation.
+5. **MRF is untuned:** the unary likelihood is fit on preprocessed intensity, where vessels are *darker*, but the default means assume vessels are brighter. `fit_likelihoods` is never called, which is why F1 drops. This needs fixing plus a λ/β sweep on train.
 
 ---
 
@@ -162,9 +190,9 @@
 - [x] **Sprint 3.5: Master Integrated Results Matrix (Phase 25)**
   - [x] Produce `outputs/final_retinal_pgm_results.csv` integrating mathematical features, BN posterior probabilities, and MRF metrics.
 
-- [x] **Sprint 3.6: Resolution of 8 Core Research Experiments (Phase 26)**
-  - [x] Formulate rigorous scientific answers for Experiments 1 through 8.
+- [ ] **Sprint 3.6: Resolution of 8 Core Research Experiments (Phase 26)**
+  - [ ] Write evidence-based answers once limitations 1–5 above are addressed.
 
-- [ ] **Sprint 3.7: Interactive Notebook & Presentation Visualizations (Phases 24, 35, 36)**
-  - [ ] Final end-to-end demonstration Jupyter Notebook (`notebooks/retinal_pgm_pipeline_demo.ipynb`).
-  - [ ] Presentation figures and summary charts.
+- [x] **Sprint 3.7: Interactive Notebook & Presentation Visualizations (Phases 24, 35, 36)**
+  - [x] Demonstration Jupyter Notebook (`notebooks/retinal_pgm_pipeline_demo.ipynb`).
+  - [x] `src/visualization.py`: 15 figures in `outputs/figures/`, all rendered from pipeline outputs (see `outputs/figures/README.md`).
