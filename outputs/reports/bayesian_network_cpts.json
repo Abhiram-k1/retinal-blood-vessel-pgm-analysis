@@ -1,0 +1,214 @@
+{
+  "discretization_bins": {
+    "B": [
+      98.3308,
+      139.3365
+    ],
+    "T": [
+      1.0695201132630978,
+      1.084226157343212
+    ],
+    "D": [
+      0.0005697240375539435,
+      0.000749662876678758
+    ],
+    "eta": [
+      0.00012158635741626046,
+      0.00015076408025040163
+    ]
+  },
+  "states": {
+    "B": [
+      "Low",
+      "Medium",
+      "High"
+    ],
+    "T": [
+      "Low",
+      "Medium",
+      "High"
+    ],
+    "D": [
+      "Low",
+      "Medium",
+      "High"
+    ],
+    "eta": [
+      "Low",
+      "Medium",
+      "High"
+    ],
+    "S": [
+      "Normal",
+      "Complex"
+    ]
+  },
+  "cpts": {
+    "P(B)": {
+      "Low": 0.34782608695652173,
+      "Medium": 0.30434782608695654,
+      "High": 0.34782608695652173
+    },
+    "P(T|B)": {
+      "Low": {
+        "Low": 0.3,
+        "Medium": 0.4,
+        "High": 0.3
+      },
+      "Medium": {
+        "Low": 0.2222222222222222,
+        "Medium": 0.2222222222222222,
+        "High": 0.5555555555555556
+      },
+      "High": {
+        "Low": 0.5,
+        "Medium": 0.3,
+        "High": 0.2
+      }
+    },
+    "P(D|B)": {
+      "Low": {
+        "Low": 0.1,
+        "Medium": 0.2,
+        "High": 0.7
+      },
+      "Medium": {
+        "Low": 0.2222222222222222,
+        "Medium": 0.5555555555555556,
+        "High": 0.2222222222222222
+      },
+      "High": {
+        "Low": 0.7,
+        "Medium": 0.2,
+        "High": 0.1
+      }
+    },
+    "P(eta|D)": {
+      "Low": {
+        "Low": 0.6,
+        "Medium": 0.3,
+        "High": 0.1
+      },
+      "Medium": {
+        "Low": 0.3333333333333333,
+        "Medium": 0.4444444444444444,
+        "High": 0.2222222222222222
+      },
+      "High": {
+        "Low": 0.1,
+        "Medium": 0.2,
+        "High": 0.7
+      }
+    },
+    "P(S|T,D,eta)": {
+      "T=Low,D=Low,eta=Low": {
+        "Normal": 0.6666666666666666,
+        "Complex": 0.3333333333333333
+      },
+      "T=Low,D=Low,eta=Medium": {
+        "Normal": 0.75,
+        "Complex": 0.25
+      },
+      "T=Low,D=Low,eta=High": {
+        "Normal": 0.5,
+        "Complex": 0.5
+      },
+      "T=Low,D=Medium,eta=Low": {
+        "Normal": 0.5,
+        "Complex": 0.5
+      },
+      "T=Low,D=Medium,eta=Medium": {
+        "Normal": 0.6666666666666666,
+        "Complex": 0.3333333333333333
+      },
+      "T=Low,D=Medium,eta=High": {
+        "Normal": 0.5,
+        "Complex": 0.5
+      },
+      "T=Low,D=High,eta=Low": {
+        "Normal": 0.5,
+        "Complex": 0.5
+      },
+      "T=Low,D=High,eta=Medium": {
+        "Normal": 0.6666666666666666,
+        "Complex": 0.3333333333333333
+      },
+      "T=Low,D=High,eta=High": {
+        "Normal": 0.75,
+        "Complex": 0.25
+      },
+      "T=Medium,D=Low,eta=Low": {
+        "Normal": 0.8,
+        "Complex": 0.2
+      },
+      "T=Medium,D=Low,eta=Medium": {
+        "Normal": 0.5,
+        "Complex": 0.5
+      },
+      "T=Medium,D=Low,eta=High": {
+        "Normal": 0.5,
+        "Complex": 0.5
+      },
+      "T=Medium,D=Medium,eta=Low": {
+        "Normal": 0.5,
+        "Complex": 0.5
+      },
+      "T=Medium,D=Medium,eta=Medium": {
+        "Normal": 0.5,
+        "Complex": 0.5
+      },
+      "T=Medium,D=Medium,eta=High": {
+        "Normal": 0.5,
+        "Complex": 0.5
+      },
+      "T=Medium,D=High,eta=Low": {
+        "Normal": 0.5,
+        "Complex": 0.5
+      },
+      "T=Medium,D=High,eta=Medium": {
+        "Normal": 0.5,
+        "Complex": 0.5
+      },
+      "T=Medium,D=High,eta=High": {
+        "Normal": 0.8,
+        "Complex": 0.2
+      },
+      "T=High,D=Low,eta=Low": {
+        "Normal": 0.3333333333333333,
+        "Complex": 0.6666666666666666
+      },
+      "T=High,D=Low,eta=Medium": {
+        "Normal": 0.5,
+        "Complex": 0.5
+      },
+      "T=High,D=Low,eta=High": {
+        "Normal": 0.5,
+        "Complex": 0.5
+      },
+      "T=High,D=Medium,eta=Low": {
+        "Normal": 0.75,
+        "Complex": 0.25
+      },
+      "T=High,D=Medium,eta=Medium": {
+        "Normal": 0.75,
+        "Complex": 0.25
+      },
+      "T=High,D=Medium,eta=High": {
+        "Normal": 0.6666666666666666,
+        "Complex": 0.3333333333333333
+      },
+      "T=High,D=High,eta=Low": {
+        "Normal": 0.5,
+        "Complex": 0.5
+      },
+      "T=High,D=High,eta=Medium": {
+        "Normal": 0.5,
+        "Complex": 0.5
+      },
+      "T=High,D=High,eta=High": {
+        "Normal": 0.3333333333333333,
+        "Complex": 0.6666666666666666
+      }
+    }
+  }
+}
