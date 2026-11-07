@@ -8,30 +8,6 @@
   <key id="d1" for="node" attr.name="degree" attr.type="long" />
   <key id="d0" for="node" attr.name="node_type" attr.type="string" />
   <graph edgedefault="undirected">
-    <node id="0">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">461.0</data>
-      <data key="d3">26.0</data>
-    </node>
-    <node id="1">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">466.0</data>
-      <data key="d3">28.0</data>
-    </node>
-    <node id="2">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">462.0</data>
-      <data key="d3">41.0</data>
-    </node>
-    <node id="3">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">467.0</data>
-      <data key="d3">41.0</data>
-    </node>
     <node id="4">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
@@ -110,23 +86,11 @@
       <data key="d2">317.0</data>
       <data key="d3">176.0</data>
     </node>
-    <node id="17">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">664.0</data>
-      <data key="d3">177.0</data>
-    </node>
     <node id="18">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
       <data key="d2">320.0</data>
       <data key="d3">180.0</data>
-    </node>
-    <node id="19">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">660.0</data>
-      <data key="d3">186.0</data>
     </node>
     <node id="20">
       <data key="d0">endpoint</data>
@@ -157,12 +121,6 @@
       <data key="d1">1</data>
       <data key="d2">273.0</data>
       <data key="d3">213.0</data>
-    </node>
-    <node id="25">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">684.0</data>
-      <data key="d3">215.0</data>
     </node>
     <node id="26">
       <data key="d0">endpoint</data>
@@ -296,23 +254,11 @@
       <data key="d2">509.0</data>
       <data key="d3">293.0</data>
     </node>
-    <node id="48">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">726.0</data>
-      <data key="d3">298.0</data>
-    </node>
     <node id="49">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
       <data key="d2">75.0</data>
       <data key="d3">301.0</data>
-    </node>
-    <node id="50">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">717.0</data>
-      <data key="d3">303.0</data>
     </node>
     <node id="51">
       <data key="d0">endpoint</data>
@@ -331,12 +277,6 @@
       <data key="d1">1</data>
       <data key="d2">417.0</data>
       <data key="d3">307.0</data>
-    </node>
-    <node id="54">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">409.0</data>
-      <data key="d3">308.0</data>
     </node>
     <node id="55">
       <data key="d0">endpoint</data>
@@ -416,12 +356,6 @@
       <data key="d2">673.0</data>
       <data key="d3">343.0</data>
     </node>
-    <node id="68">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">536.0</data>
-      <data key="d3">348.0</data>
-    </node>
     <node id="69">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
@@ -439,12 +373,6 @@
       <data key="d1">1</data>
       <data key="d2">584.0</data>
       <data key="d3">355.0</data>
-    </node>
-    <node id="72">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">537.0</data>
-      <data key="d3">356.0</data>
     </node>
     <node id="73">
       <data key="d0">endpoint</data>
@@ -487,12 +415,6 @@
       <data key="d1">1</data>
       <data key="d2">642.0</data>
       <data key="d3">370.0</data>
-    </node>
-    <node id="80">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">510.0</data>
-      <data key="d3">374.0</data>
     </node>
     <node id="81">
       <data key="d0">endpoint</data>
@@ -602,41 +524,17 @@
       <data key="d2">444.0</data>
       <data key="d3">416.0</data>
     </node>
-    <node id="99">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">410.0</data>
-      <data key="d3">417.0</data>
-    </node>
     <node id="100">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
       <data key="d2">47.0</data>
       <data key="d3">420.0</data>
     </node>
-    <node id="101">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">657.0</data>
-      <data key="d3">424.0</data>
-    </node>
     <node id="102">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
       <data key="d2">475.0</data>
       <data key="d3">426.0</data>
-    </node>
-    <node id="103">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">652.0</data>
-      <data key="d3">429.0</data>
-    </node>
-    <node id="104">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">802.0</data>
-      <data key="d3">433.0</data>
     </node>
     <node id="105">
       <data key="d0">endpoint</data>
@@ -656,12 +554,6 @@
       <data key="d2">636.0</data>
       <data key="d3">436.0</data>
     </node>
-    <node id="108">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">795.0</data>
-      <data key="d3">436.0</data>
-    </node>
     <node id="109">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
@@ -674,23 +566,11 @@
       <data key="d2">700.0</data>
       <data key="d3">440.0</data>
     </node>
-    <node id="111">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">804.0</data>
-      <data key="d3">443.0</data>
-    </node>
     <node id="112">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
       <data key="d2">96.0</data>
       <data key="d3">444.0</data>
-    </node>
-    <node id="113">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">799.0</data>
-      <data key="d3">445.0</data>
     </node>
     <node id="114">
       <data key="d0">endpoint</data>
@@ -704,22 +584,10 @@
       <data key="d2">751.0</data>
       <data key="d3">454.0</data>
     </node>
-    <node id="116">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">645.0</data>
-      <data key="d3">459.0</data>
-    </node>
     <node id="117">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
       <data key="d2">632.0</data>
-      <data key="d3">460.0</data>
-    </node>
-    <node id="118">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">638.0</data>
       <data key="d3">460.0</data>
     </node>
     <node id="119">
@@ -727,12 +595,6 @@
       <data key="d1">1</data>
       <data key="d2">541.0</data>
       <data key="d3">463.0</data>
-    </node>
-    <node id="120">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">647.0</data>
-      <data key="d3">464.0</data>
     </node>
     <node id="121">
       <data key="d0">endpoint</data>
@@ -770,18 +632,6 @@
       <data key="d2">839.0</data>
       <data key="d3">477.0</data>
     </node>
-    <node id="127">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">40.0</data>
-      <data key="d3">483.0</data>
-    </node>
-    <node id="128">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">527.0</data>
-      <data key="d3">484.0</data>
-    </node>
     <node id="129">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
@@ -793,12 +643,6 @@
       <data key="d1">1</data>
       <data key="d2">342.0</data>
       <data key="d3">485.0</data>
-    </node>
-    <node id="131">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">45.0</data>
-      <data key="d3">486.0</data>
     </node>
     <node id="132">
       <data key="d0">endpoint</data>
@@ -878,41 +722,17 @@
       <data key="d2">816.0</data>
       <data key="d3">509.0</data>
     </node>
-    <node id="145">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">260.0</data>
-      <data key="d3">510.0</data>
-    </node>
     <node id="146">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
       <data key="d2">387.0</data>
       <data key="d3">513.0</data>
     </node>
-    <node id="147">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">437.0</data>
-      <data key="d3">513.0</data>
-    </node>
-    <node id="148">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">554.0</data>
-      <data key="d3">523.0</data>
-    </node>
     <node id="149">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
       <data key="d2">564.0</data>
       <data key="d3">524.0</data>
-    </node>
-    <node id="150">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">558.0</data>
-      <data key="d3">525.0</data>
     </node>
     <node id="151">
       <data key="d0">endpoint</data>
@@ -956,12 +776,6 @@
       <data key="d2">594.0</data>
       <data key="d3">533.0</data>
     </node>
-    <node id="158">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">366.0</data>
-      <data key="d3">534.0</data>
-    </node>
     <node id="159">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
@@ -979,12 +793,6 @@
       <data key="d1">1</data>
       <data key="d2">638.0</data>
       <data key="d3">535.0</data>
-    </node>
-    <node id="162">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">381.0</data>
-      <data key="d3">536.0</data>
     </node>
     <node id="163">
       <data key="d0">endpoint</data>
@@ -1004,29 +812,11 @@
       <data key="d2">518.0</data>
       <data key="d3">540.0</data>
     </node>
-    <node id="166">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">556.0</data>
-      <data key="d3">541.0</data>
-    </node>
     <node id="167">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
       <data key="d2">461.0</data>
       <data key="d3">542.0</data>
-    </node>
-    <node id="168">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">478.0</data>
-      <data key="d3">544.0</data>
-    </node>
-    <node id="169">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">485.0</data>
-      <data key="d3">544.0</data>
     </node>
     <node id="170">
       <data key="d0">endpoint</data>
@@ -1040,12 +830,6 @@
       <data key="d2">616.0</data>
       <data key="d3">558.0</data>
     </node>
-    <node id="172">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">444.0</data>
-      <data key="d3">561.0</data>
-    </node>
     <node id="173">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
@@ -1057,12 +841,6 @@
       <data key="d1">1</data>
       <data key="d2">611.0</data>
       <data key="d3">562.0</data>
-    </node>
-    <node id="175">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">592.0</data>
-      <data key="d3">563.0</data>
     </node>
     <node id="176">
       <data key="d0">endpoint</data>
@@ -1076,12 +854,6 @@
       <data key="d2">564.0</data>
       <data key="d3">567.0</data>
     </node>
-    <node id="178">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">469.0</data>
-      <data key="d3">568.0</data>
-    </node>
     <node id="179">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
@@ -1094,22 +866,10 @@
       <data key="d2">559.0</data>
       <data key="d3">571.0</data>
     </node>
-    <node id="181">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">595.0</data>
-      <data key="d3">571.0</data>
-    </node>
     <node id="182">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
       <data key="d2">604.0</data>
-      <data key="d3">572.0</data>
-    </node>
-    <node id="183">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">624.0</data>
       <data key="d3">572.0</data>
     </node>
     <node id="184">
@@ -1160,18 +920,6 @@
       <data key="d2">407.0</data>
       <data key="d3">588.0</data>
     </node>
-    <node id="192">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">664.0</data>
-      <data key="d3">588.0</data>
-    </node>
-    <node id="193">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">669.0</data>
-      <data key="d3">588.0</data>
-    </node>
     <node id="194">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
@@ -1208,18 +956,6 @@
       <data key="d2">421.0</data>
       <data key="d3">592.0</data>
     </node>
-    <node id="200">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">612.0</data>
-      <data key="d3">594.0</data>
-    </node>
-    <node id="201">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">669.0</data>
-      <data key="d3">594.0</data>
-    </node>
     <node id="202">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
@@ -1248,12 +984,6 @@
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
       <data key="d2">594.0</data>
-      <data key="d3">603.0</data>
-    </node>
-    <node id="207">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">606.0</data>
       <data key="d3">603.0</data>
     </node>
     <node id="208">
@@ -1298,12 +1028,6 @@
       <data key="d2">394.0</data>
       <data key="d3">611.0</data>
     </node>
-    <node id="215">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">439.0</data>
-      <data key="d3">611.0</data>
-    </node>
     <node id="216">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
@@ -1332,12 +1056,6 @@
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
       <data key="d2">339.0</data>
-      <data key="d3">617.0</data>
-    </node>
-    <node id="221">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">631.0</data>
       <data key="d3">617.0</data>
     </node>
     <node id="222">
@@ -1376,23 +1094,11 @@
       <data key="d2">329.0</data>
       <data key="d3">622.0</data>
     </node>
-    <node id="228">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">471.0</data>
-      <data key="d3">622.0</data>
-    </node>
     <node id="229">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
       <data key="d2">480.0</data>
       <data key="d3">622.0</data>
-    </node>
-    <node id="230">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">407.0</data>
-      <data key="d3">623.0</data>
     </node>
     <node id="231">
       <data key="d0">endpoint</data>
@@ -1405,24 +1111,6 @@
       <data key="d1">1</data>
       <data key="d2">769.0</data>
       <data key="d3">624.0</data>
-    </node>
-    <node id="233">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">464.0</data>
-      <data key="d3">625.0</data>
-    </node>
-    <node id="234">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">651.0</data>
-      <data key="d3">625.0</data>
-    </node>
-    <node id="235">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">470.0</data>
-      <data key="d3">626.0</data>
     </node>
     <node id="236">
       <data key="d0">endpoint</data>
@@ -1484,35 +1172,11 @@
       <data key="d2">589.0</data>
       <data key="d3">635.0</data>
     </node>
-    <node id="246">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">69.0</data>
-      <data key="d3">637.0</data>
-    </node>
-    <node id="247">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">327.0</data>
-      <data key="d3">637.0</data>
-    </node>
-    <node id="248">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">472.0</data>
-      <data key="d3">637.0</data>
-    </node>
     <node id="249">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
       <data key="d2">703.0</data>
       <data key="d3">637.0</data>
-    </node>
-    <node id="250">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">498.0</data>
-      <data key="d3">638.0</data>
     </node>
     <node id="251">
       <data key="d0">endpoint</data>
@@ -1538,36 +1202,6 @@
       <data key="d2">452.0</data>
       <data key="d3">642.0</data>
     </node>
-    <node id="255">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">68.0</data>
-      <data key="d3">643.0</data>
-    </node>
-    <node id="256">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">168.0</data>
-      <data key="d3">643.0</data>
-    </node>
-    <node id="257">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">320.0</data>
-      <data key="d3">643.0</data>
-    </node>
-    <node id="258">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">346.0</data>
-      <data key="d3">647.0</data>
-    </node>
-    <node id="259">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">74.0</data>
-      <data key="d3">648.0</data>
-    </node>
     <node id="260">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
@@ -1592,12 +1226,6 @@
       <data key="d2">421.0</data>
       <data key="d3">650.0</data>
     </node>
-    <node id="264">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">638.0</data>
-      <data key="d3">650.0</data>
-    </node>
     <node id="265">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
@@ -1616,34 +1244,16 @@
       <data key="d2">675.0</data>
       <data key="d3">653.0</data>
     </node>
-    <node id="268">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">374.0</data>
-      <data key="d3">654.0</data>
-    </node>
     <node id="269">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
       <data key="d2">406.0</data>
       <data key="d3">655.0</data>
     </node>
-    <node id="270">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">435.0</data>
-      <data key="d3">655.0</data>
-    </node>
     <node id="271">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
       <data key="d2">449.0</data>
-      <data key="d3">656.0</data>
-    </node>
-    <node id="272">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">470.0</data>
       <data key="d3">656.0</data>
     </node>
     <node id="273">
@@ -1657,12 +1267,6 @@
       <data key="d1">1</data>
       <data key="d2">418.0</data>
       <data key="d3">659.0</data>
-    </node>
-    <node id="275">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">231.0</data>
-      <data key="d3">660.0</data>
     </node>
     <node id="276">
       <data key="d0">endpoint</data>
@@ -1688,12 +1292,6 @@
       <data key="d2">457.0</data>
       <data key="d3">661.0</data>
     </node>
-    <node id="280">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">368.0</data>
-      <data key="d3">665.0</data>
-    </node>
     <node id="281">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
@@ -1718,12 +1316,6 @@
       <data key="d2">346.0</data>
       <data key="d3">668.0</data>
     </node>
-    <node id="285">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">373.0</data>
-      <data key="d3">669.0</data>
-    </node>
     <node id="286">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
@@ -1735,12 +1327,6 @@
       <data key="d1">1</data>
       <data key="d2">414.0</data>
       <data key="d3">670.0</data>
-    </node>
-    <node id="288">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">238.0</data>
-      <data key="d3">671.0</data>
     </node>
     <node id="289">
       <data key="d0">endpoint</data>
@@ -1760,22 +1346,10 @@
       <data key="d2">461.0</data>
       <data key="d3">671.0</data>
     </node>
-    <node id="292">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">557.0</data>
-      <data key="d3">672.0</data>
-    </node>
     <node id="293">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
       <data key="d2">341.0</data>
-      <data key="d3">673.0</data>
-    </node>
-    <node id="294">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">561.0</data>
       <data key="d3">673.0</data>
     </node>
     <node id="295">
@@ -1838,12 +1412,6 @@
       <data key="d2">579.0</data>
       <data key="d3">683.0</data>
     </node>
-    <node id="305">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">592.0</data>
-      <data key="d3">683.0</data>
-    </node>
     <node id="306">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
@@ -1856,23 +1424,11 @@
       <data key="d2">364.0</data>
       <data key="d3">684.0</data>
     </node>
-    <node id="308">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">493.0</data>
-      <data key="d3">684.0</data>
-    </node>
     <node id="309">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
       <data key="d2">620.0</data>
       <data key="d3">684.0</data>
-    </node>
-    <node id="310">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">490.0</data>
-      <data key="d3">685.0</data>
     </node>
     <node id="311">
       <data key="d0">endpoint</data>
@@ -1892,41 +1448,11 @@
       <data key="d2">459.0</data>
       <data key="d3">686.0</data>
     </node>
-    <node id="314">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">576.0</data>
-      <data key="d3">686.0</data>
-    </node>
-    <node id="315">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">556.0</data>
-      <data key="d3">688.0</data>
-    </node>
-    <node id="316">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">587.0</data>
-      <data key="d3">688.0</data>
-    </node>
     <node id="317">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
       <data key="d2">423.0</data>
       <data key="d3">689.0</data>
-    </node>
-    <node id="318">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">476.0</data>
-      <data key="d3">689.0</data>
-    </node>
-    <node id="319">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">359.0</data>
-      <data key="d3">690.0</data>
     </node>
     <node id="320">
       <data key="d0">endpoint</data>
@@ -1938,18 +1464,6 @@
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
       <data key="d2">406.0</data>
-      <data key="d3">690.0</data>
-    </node>
-    <node id="322">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">447.0</data>
-      <data key="d3">690.0</data>
-    </node>
-    <node id="323">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">661.0</data>
       <data key="d3">690.0</data>
     </node>
     <node id="324">
@@ -1964,41 +1478,11 @@
       <data key="d2">690.0</data>
       <data key="d3">693.0</data>
     </node>
-    <node id="326">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">355.0</data>
-      <data key="d3">694.0</data>
-    </node>
-    <node id="327">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">364.0</data>
-      <data key="d3">694.0</data>
-    </node>
-    <node id="328">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">343.0</data>
-      <data key="d3">695.0</data>
-    </node>
     <node id="329">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
       <data key="d2">580.0</data>
       <data key="d3">697.0</data>
-    </node>
-    <node id="330">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">341.0</data>
-      <data key="d3">701.0</data>
-    </node>
-    <node id="331">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">346.0</data>
-      <data key="d3">702.0</data>
     </node>
     <node id="332">
       <data key="d0">endpoint</data>
@@ -2040,12 +1524,6 @@
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
       <data key="d2">319.0</data>
-      <data key="d3">710.0</data>
-    </node>
-    <node id="339">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">594.0</data>
       <data key="d3">710.0</data>
     </node>
     <node id="340">
@@ -2132,12 +1610,6 @@
       <data key="d2">837.0</data>
       <data key="d3">746.0</data>
     </node>
-    <node id="354">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">574.0</data>
-      <data key="d3">747.0</data>
-    </node>
     <node id="355">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
@@ -2162,12 +1634,6 @@
       <data key="d2">597.0</data>
       <data key="d3">753.0</data>
     </node>
-    <node id="359">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">523.0</data>
-      <data key="d3">754.0</data>
-    </node>
     <node id="360">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
@@ -2180,12 +1646,6 @@
       <data key="d2">631.0</data>
       <data key="d3">755.0</data>
     </node>
-    <node id="362">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">566.0</data>
-      <data key="d3">760.0</data>
-    </node>
     <node id="363">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
@@ -2196,12 +1656,6 @@
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
       <data key="d2">216.0</data>
-      <data key="d3">763.0</data>
-    </node>
-    <node id="365">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">500.0</data>
       <data key="d3">763.0</data>
     </node>
     <node id="366">
@@ -2233,12 +1687,6 @@
       <data key="d1">1</data>
       <data key="d2">775.0</data>
       <data key="d3">766.0</data>
-    </node>
-    <node id="371">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">355.0</data>
-      <data key="d3">767.0</data>
     </node>
     <node id="372">
       <data key="d0">endpoint</data>
@@ -2312,18 +1760,6 @@
       <data key="d2">701.0</data>
       <data key="d3">780.0</data>
     </node>
-    <node id="384">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">831.0</data>
-      <data key="d3">780.0</data>
-    </node>
-    <node id="385">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">423.0</data>
-      <data key="d3">781.0</data>
-    </node>
     <node id="386">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
@@ -2348,12 +1784,6 @@
       <data key="d2">160.0</data>
       <data key="d3">786.0</data>
     </node>
-    <node id="390">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">186.0</data>
-      <data key="d3">786.0</data>
-    </node>
     <node id="391">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
@@ -2371,18 +1801,6 @@
       <data key="d1">1</data>
       <data key="d2">817.0</data>
       <data key="d3">791.0</data>
-    </node>
-    <node id="394">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">190.0</data>
-      <data key="d3">793.0</data>
-    </node>
-    <node id="395">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">196.0</data>
-      <data key="d3">793.0</data>
     </node>
     <node id="396">
       <data key="d0">endpoint</data>
@@ -2468,12 +1886,6 @@
       <data key="d2">800.0</data>
       <data key="d3">808.0</data>
     </node>
-    <node id="410">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">556.0</data>
-      <data key="d3">811.0</data>
-    </node>
     <node id="411">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
@@ -2490,12 +1902,6 @@
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
       <data key="d2">377.0</data>
-      <data key="d3">813.0</data>
-    </node>
-    <node id="414">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">543.0</data>
       <data key="d3">813.0</data>
     </node>
     <node id="415">
@@ -2540,18 +1946,6 @@
       <data key="d2">611.0</data>
       <data key="d3">819.0</data>
     </node>
-    <node id="422">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">410.0</data>
-      <data key="d3">821.0</data>
-    </node>
-    <node id="423">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">483.0</data>
-      <data key="d3">823.0</data>
-    </node>
     <node id="424">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
@@ -2569,12 +1963,6 @@
       <data key="d1">1</data>
       <data key="d2">391.0</data>
       <data key="d3">828.0</data>
-    </node>
-    <node id="427">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">614.0</data>
-      <data key="d3">829.0</data>
     </node>
     <node id="428">
       <data key="d0">endpoint</data>
@@ -2618,12 +2006,6 @@
       <data key="d2">572.0</data>
       <data key="d3">833.0</data>
     </node>
-    <node id="435">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">491.0</data>
-      <data key="d3">834.0</data>
-    </node>
     <node id="436">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
@@ -2635,12 +2017,6 @@
       <data key="d1">1</data>
       <data key="d2">265.0</data>
       <data key="d3">837.0</data>
-    </node>
-    <node id="438">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">662.0</data>
-      <data key="d3">838.0</data>
     </node>
     <node id="439">
       <data key="d0">endpoint</data>
@@ -2712,12 +2088,6 @@
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
       <data key="d2">506.0</data>
-      <data key="d3">847.0</data>
-    </node>
-    <node id="451">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">586.0</data>
       <data key="d3">847.0</data>
     </node>
     <node id="452">
@@ -2797,12 +2167,6 @@
       <data key="d1">1</data>
       <data key="d2">459.0</data>
       <data key="d3">862.0</data>
-    </node>
-    <node id="465">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">272.0</data>
-      <data key="d3">865.0</data>
     </node>
     <node id="466">
       <data key="d0">endpoint</data>
@@ -2912,12 +2276,6 @@
       <data key="d2">671.0</data>
       <data key="d3">892.0</data>
     </node>
-    <node id="484">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">383.0</data>
-      <data key="d3">893.0</data>
-    </node>
     <node id="485">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
@@ -2954,12 +2312,6 @@
       <data key="d2">535.0</data>
       <data key="d3">903.0</data>
     </node>
-    <node id="491">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">449.0</data>
-      <data key="d3">906.0</data>
-    </node>
     <node id="492">
       <data key="d0">endpoint</data>
       <data key="d1">1</data>
@@ -2995,12 +2347,6 @@
       <data key="d1">1</data>
       <data key="d2">612.0</data>
       <data key="d3">913.0</data>
-    </node>
-    <node id="498">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">501.0</data>
-      <data key="d3">916.0</data>
     </node>
     <node id="499">
       <data key="d0">endpoint</data>
@@ -3043,12 +2389,6 @@
       <data key="d1">1</data>
       <data key="d2">534.0</data>
       <data key="d3">924.0</data>
-    </node>
-    <node id="506">
-      <data key="d0">endpoint</data>
-      <data key="d1">0</data>
-      <data key="d2">440.0</data>
-      <data key="d3">929.0</data>
     </node>
     <node id="507">
       <data key="d0">endpoint</data>
@@ -3176,24 +2516,6 @@
       <data key="d2">529.0</data>
       <data key="d3">436.0</data>
     </node>
-    <node id="528">
-      <data key="d0">junction</data>
-      <data key="d1">0</data>
-      <data key="d2">799.0</data>
-      <data key="d3">436.0</data>
-    </node>
-    <node id="529">
-      <data key="d0">junction</data>
-      <data key="d1">0</data>
-      <data key="d2">800.0</data>
-      <data key="d3">441.0</data>
-    </node>
-    <node id="530">
-      <data key="d0">junction</data>
-      <data key="d1">0</data>
-      <data key="d2">645.0</data>
-      <data key="d3">461.0</data>
-    </node>
     <node id="531">
       <data key="d0">junction</data>
       <data key="d1">3</data>
@@ -3301,12 +2623,6 @@
       <data key="d1">2</data>
       <data key="d2">328.0</data>
       <data key="d3">544.0</data>
-    </node>
-    <node id="549">
-      <data key="d0">junction</data>
-      <data key="d1">0</data>
-      <data key="d2">483.0</data>
-      <data key="d3">547.0</data>
     </node>
     <node id="550">
       <data key="d0">junction</data>
@@ -3475,12 +2791,6 @@
       <data key="d1">2</data>
       <data key="d2">470.0</data>
       <data key="d3">639.0</data>
-    </node>
-    <node id="578">
-      <data key="d0">junction</data>
-      <data key="d1">0</data>
-      <data key="d2">72.0</data>
-      <data key="d3">641.0</data>
     </node>
     <node id="579">
       <data key="d0">junction</data>
@@ -3656,12 +2966,6 @@
       <data key="d2">555.0</data>
       <data key="d3">690.0</data>
     </node>
-    <node id="608">
-      <data key="d0">junction</data>
-      <data key="d1">0</data>
-      <data key="d2">359.0</data>
-      <data key="d3">693.0</data>
-    </node>
     <node id="609">
       <data key="d0">junction</data>
       <data key="d1">2</data>
@@ -3673,12 +2977,6 @@
       <data key="d1">1</data>
       <data key="d2">690.0</data>
       <data key="d3">696.0</data>
-    </node>
-    <node id="611">
-      <data key="d0">junction</data>
-      <data key="d1">0</data>
-      <data key="d2">343.0</data>
-      <data key="d3">701.0</data>
     </node>
     <node id="612">
       <data key="d0">junction</data>
@@ -3877,12 +3175,6 @@
       <data key="d1">2</data>
       <data key="d2">667.0</data>
       <data key="d3">785.0</data>
-    </node>
-    <node id="645">
-      <data key="d0">junction</data>
-      <data key="d1">0</data>
-      <data key="d2">191.0</data>
-      <data key="d3">791.0</data>
     </node>
     <node id="646">
       <data key="d0">junction</data>

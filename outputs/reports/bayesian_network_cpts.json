@@ -6,16 +6,17 @@
     ],
     "T": [
       1.0695201132630978,
-      1.084226157343212
+      1.0840802504092646
     ],
     "D": [
-      0.0005697240375539435,
-      0.000749662876678758
+      0.0010732730487037394,
+      0.0013163502414767184
     ],
     "eta": [
-      0.00012158635741626046,
-      0.00015076408025040163
-    ]
+      0.00023910182641251579,
+      0.00027466580179666384
+    ],
+    "S_fd_threshold": 1.6802791312804417
   },
   "states": {
     "B": [
@@ -86,8 +87,8 @@
     "P(eta|D)": {
       "Low": {
         "Low": 0.6,
-        "Medium": 0.3,
-        "High": 0.1
+        "Medium": 0.2,
+        "High": 0.2
       },
       "Medium": {
         "Low": 0.3333333333333333,
@@ -96,8 +97,8 @@
       },
       "High": {
         "Low": 0.1,
-        "Medium": 0.2,
-        "High": 0.7
+        "Medium": 0.3,
+        "High": 0.6
       }
     },
     "P(S|T,D,eta)": {
@@ -106,12 +107,12 @@
         "Complex": 0.3333333333333333
       },
       "T=Low,D=Low,eta=Medium": {
-        "Normal": 0.75,
-        "Complex": 0.25
+        "Normal": 0.6666666666666666,
+        "Complex": 0.3333333333333333
       },
       "T=Low,D=Low,eta=High": {
-        "Normal": 0.5,
-        "Complex": 0.5
+        "Normal": 0.6666666666666666,
+        "Complex": 0.3333333333333333
       },
       "T=Low,D=Medium,eta=Low": {
         "Normal": 0.5,
@@ -130,12 +131,12 @@
         "Complex": 0.5
       },
       "T=Low,D=High,eta=Medium": {
-        "Normal": 0.6666666666666666,
-        "Complex": 0.3333333333333333
+        "Normal": 0.25,
+        "Complex": 0.75
       },
       "T=Low,D=High,eta=High": {
-        "Normal": 0.75,
-        "Complex": 0.25
+        "Normal": 0.3333333333333333,
+        "Complex": 0.6666666666666666
       },
       "T=Medium,D=Low,eta=Low": {
         "Normal": 0.8,
@@ -170,12 +171,12 @@
         "Complex": 0.5
       },
       "T=Medium,D=High,eta=High": {
-        "Normal": 0.8,
-        "Complex": 0.2
+        "Normal": 0.2,
+        "Complex": 0.8
       },
       "T=High,D=Low,eta=Low": {
-        "Normal": 0.3333333333333333,
-        "Complex": 0.6666666666666666
+        "Normal": 0.6666666666666666,
+        "Complex": 0.3333333333333333
       },
       "T=High,D=Low,eta=Medium": {
         "Normal": 0.5,
@@ -186,12 +187,12 @@
         "Complex": 0.5
       },
       "T=High,D=Medium,eta=Low": {
-        "Normal": 0.75,
-        "Complex": 0.25
+        "Normal": 0.5,
+        "Complex": 0.5
       },
       "T=High,D=Medium,eta=Medium": {
-        "Normal": 0.75,
-        "Complex": 0.25
+        "Normal": 0.25,
+        "Complex": 0.75
       },
       "T=High,D=Medium,eta=High": {
         "Normal": 0.6666666666666666,

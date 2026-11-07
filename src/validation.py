@@ -1,7 +1,8 @@
 """
 Segmentation Validation Module for Retinal Vessel Extraction.
-Calculates Accuracy, Precision, Recall/Sensitivity, Specificity, and F1-score
-against human observer ground-truth masks strictly within Field of View (FOV).
+Calculates Accuracy, Precision, Recall/Sensitivity, Specificity, F1-score,
+Dice Coefficient, and IoU against human observer ground-truth masks strictly
+within Field of View (FOV).
 """
 
 from pathlib import Path
@@ -16,6 +17,10 @@ OUTPUTS_DIR = PROJECT_ROOT / "outputs"
 def compute_binary_metrics(pred_mask: np.ndarray, gt_mask: np.ndarray, fov_mask: np.ndarray) -> dict:
     """
     Computes confusion matrix and validation metrics strictly evaluated within fov_mask.
+
+    Returns a dict with keys:
+        TP, FP, TN, FN, accuracy, precision, recall_sensitivity, specificity,
+        f1_score, dice_coefficient, iou
     """
     # Restrict to pixels inside FOV
     pred_valid = (pred_mask > 0)[fov_mask]
@@ -32,7 +37,15 @@ def compute_binary_metrics(pred_mask: np.ndarray, gt_mask: np.ndarray, fov_mask:
     recall = tp / (tp + fn) if (tp + fn) > 0 else 0.0  # Sensitivity
     specificity = tn / (tn + fp) if (tn + fp) > 0 else 0.0
     f1 = (2 * precision * recall) / (precision + recall) if (precision + recall) > 0 else 0.0
-    
+
+    # Dice coefficient: 2*TP / (2*TP + FP + FN)  — identical to F1 by derivation
+    denom_dice = 2 * tp + fp + fn
+    dice = float(2 * tp / denom_dice) if denom_dice > 0 else 0.0
+
+    # Intersection over Union (Jaccard index): TP / (TP + FP + FN)
+    denom_iou = tp + fp + fn
+    iou = float(tp / denom_iou) if denom_iou > 0 else 0.0
+
     return {
         "TP": int(tp),
         "FP": int(fp),
@@ -42,7 +55,9 @@ def compute_binary_metrics(pred_mask: np.ndarray, gt_mask: np.ndarray, fov_mask:
         "precision": float(precision),
         "recall_sensitivity": float(recall),
         "specificity": float(specificity),
-        "f1_score": float(f1)
+        "f1_score": float(f1),
+        "dice_coefficient": dice,
+        "iou": iou,
     }
 
 

@@ -1,11 +1,11 @@
 """
 Mathematical Graph Construction Module.
 Builds a NetworkX graph G=(V, E) from skeletonized vessels and detected nodes.
-Nodes represent anatomical junctions/endpoints; edges represent vessel segments
-with stored centerline paths, true curve lengths, and Euclidean chord distances.
+Includes gap-bridging and orphan node pruning to prevent spurious fragmentation (BUG-004 fix).
 """
 
 from pathlib import Path
+import json
 import numpy as np
 import pandas as pd
 import networkx as nx
@@ -16,16 +16,17 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 OUTPUTS_DIR = PROJECT_ROOT / "outputs" / "graphs"
 
 
-def build_vessel_graph(skeleton: np.ndarray, nodes_df) -> nx.Graph:
+def build_vessel_graph(skeleton: np.ndarray, nodes_df: pd.DataFrame, max_gap_bridge: float = 3.5) -> nx.Graph:
     """
     Constructs a topological NetworkX Graph G=(V, E) from skeleton and node dataframe.
     
     Args:
         skeleton: uint8 or bool array (H, W), 1=skeleton, 0=background
         nodes_df: DataFrame with columns [node_id, x, y, node_type]
+        max_gap_bridge: maximum pixel distance to bridge discontinuous branch endpoints
         
     Returns:
-        G: networkx.Graph with node attributes ('pos', 'node_type') and edge attributes
+        G: networkx.Graph with node attributes ('pos', 'node_type', 'degree') and edge attributes
            ('path', 'length', 'euclidean_distance', 'tortuosity')
     """
     G = nx.Graph()
@@ -48,7 +49,6 @@ def build_vessel_graph(skeleton: np.ndarray, nodes_df) -> nx.Graph:
     node_tree = KDTree(node_coords)
     
     # 2. Build pixel-level graph from skeleton 8-connectivity
-    # Map pixel (x, y) to integer index
     skel_points = np.column_stack([skel_x, skel_y])
     skel_tree = KDTree(skel_points)
     
@@ -65,13 +65,11 @@ def build_vessel_graph(skeleton: np.ndarray, nodes_df) -> nx.Graph:
         pixel_adj.add_edge(i, j, weight=step_len)
         
     # 3. Identify pixel indices that correspond to junction regions and temporarily remove them
-    # to decompose skeleton into disjoint vessel segments
     junction_node_rows = nodes_df[nodes_df.node_type == "junction"]
     junction_pixel_indices = set()
     
     for _, row in junction_node_rows.iterrows():
         jx, jy = row["x"], row["y"]
-        # Find all skeleton pixels within 3.5 px of junction centroid
         nearby = skel_tree.query_ball_point([jx, jy], r=3.5)
         junction_pixel_indices.update(nearby)
         
@@ -86,10 +84,8 @@ def build_vessel_graph(skeleton: np.ndarray, nodes_df) -> nx.Graph:
             continue
             
         pts = skel_points[comp_indices]
-        # Order the points along the segment path
         subg = pixel_adj.subgraph(comp_indices)
         
-        # Find segment endpoints (nodes in subg with degree <= 1)
         sub_endpoints = [n for n, deg in subg.degree() if deg <= 1]
         if len(sub_endpoints) >= 2:
             start_pix = sub_endpoints[0]
@@ -103,14 +99,12 @@ def build_vessel_graph(skeleton: np.ndarray, nodes_df) -> nx.Graph:
             
         path_coords = skel_points[ordered_path_indices]
         
-        # Calculate actual path length
         if len(path_coords) > 1:
             diffs = np.diff(path_coords, axis=0)
             actual_len = float(np.sum(np.sqrt(np.sum(diffs**2, axis=1))))
         else:
             actual_len = 1.0
             
-        # Map endpoints of path to nearest nodes in G
         start_pt = path_coords[0]
         end_pt = path_coords[-1]
         
@@ -124,11 +118,8 @@ def build_vessel_graph(skeleton: np.ndarray, nodes_df) -> nx.Graph:
             pos_u = np.array(G.nodes[u]["pos"])
             pos_v = np.array(G.nodes[v]["pos"])
             chord_dist = float(np.linalg.norm(pos_v - pos_u))
-            
-            # Avoid division by zero
             tortuosity = float(actual_len / chord_dist) if chord_dist > 1e-3 else 1.0
             
-            # Avoid adding duplicate or worse edges
             if not G.has_edge(u, v):
                 G.add_edge(
                     u, v,
@@ -137,21 +128,39 @@ def build_vessel_graph(skeleton: np.ndarray, nodes_df) -> nx.Graph:
                     euclidean_distance=chord_dist,
                     tortuosity=tortuosity
                 )
-                
-    # Update actual node degrees in G
+
+    # 5. Gap bridging: connect close endpoints within max_gap_bridge pixels
+    endpoint_nodes = [n for n in G.nodes() if G.degree(n) == 1 and G.nodes[n].get("node_type") == "endpoint"]
+    if len(endpoint_nodes) > 1:
+        ep_coords = [G.nodes[n]["pos"] for n in endpoint_nodes]
+        ep_tree = KDTree(ep_coords)
+        close_pairs = ep_tree.query_pairs(r=max_gap_bridge)
+        for i, j in close_pairs:
+            u, v = endpoint_nodes[i], endpoint_nodes[j]
+            if not G.has_edge(u, v) and not nx.has_path(G, u, v):
+                pos_u, pos_v = np.array(G.nodes[u]["pos"]), np.array(G.nodes[v]["pos"])
+                d = float(np.linalg.norm(pos_v - pos_u))
+                if d > 1e-3:
+                    G.add_edge(u, v, path=[pos_u.tolist(), pos_v.tolist()], length=d, euclidean_distance=d, tortuosity=1.0)
+
+    # 6. BUG-004 FIX: Prune orphan 0-degree nodes that do not participate in any vessel segment
+    zero_deg_nodes = [n for n, deg in G.degree() if deg == 0]
+    G.remove_nodes_from(zero_deg_nodes)
+
+    # 7. Update actual node degrees in G
     for n in G.nodes():
         G.nodes[n]["degree"] = G.degree[n]
         
     return G
 
 
-def batch_build_graphs(manifest_df, skeletons_dir: Path, nodes_dir: Path, output_dir: Path = OUTPUTS_DIR) -> None:
+def batch_build_graphs(manifest_df: pd.DataFrame, skeletons_dir: Path, nodes_dir: Path, output_dir: Path = OUTPUTS_DIR) -> None:
     """
     Builds and serializes NetworkX graphs for all images in manifest_df.
     """
     output_dir.mkdir(parents=True, exist_ok=True)
     
-    for idx, row in manifest_df.iterrows():
+    for _, row in manifest_df.iterrows():
         img_id = row["image_id"]
         skel_path = skeletons_dir / f"{img_id}_skeleton.png"
         nodes_path = nodes_dir / f"{img_id}_nodes.csv"
@@ -161,13 +170,12 @@ def batch_build_graphs(manifest_df, skeletons_dir: Path, nodes_dir: Path, output
         
         G = build_vessel_graph(skel, nodes_df)
         
-        # Save as JSON (preserves all rich attributes)
-        import json
+        # Save as JSON
         json_path = output_dir / f"{img_id}_graph.json"
         with open(json_path, "w") as f:
             json.dump(nx.node_link_data(G), f)
             
-        # Also save sanitized GraphML
+        # Save sanitized GraphML
         save_path = output_dir / f"{img_id}_graph.graphml"
         G_export = G.copy()
         for n, d in G_export.nodes(data=True):

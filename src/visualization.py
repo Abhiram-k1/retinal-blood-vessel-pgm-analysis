@@ -410,6 +410,36 @@ def fig_dashboard(seg, feat, comp, bn_res):
     _save(fig, "00_results_dashboard.png")
 
 
+def fig_ablation_study():
+    ablation_path = OUT / "ablation_study_summary.csv"
+    if not ablation_path.exists():
+        return
+    df = pd.read_csv(ablation_path)
+    if "condition" not in df.columns and "Unnamed: 0" in df.columns:
+        df = df.rename(columns={"Unnamed: 0": "condition"})
+    
+    cond_labels = [c.replace("_", " ") for c in df["condition"]]
+    metrics = ["f1_score", "dice", "iou", "precision", "recall"]
+    metric_names = ["F1 Score", "Dice Coeff", "IoU (Jaccard)", "Precision", "Recall (Sens)"]
+    
+    fig, ax = plt.subplots(figsize=(12, 6))
+    x = np.arange(len(df))
+    width = 0.15
+    colors = ["#3182ce", "#38a169", "#d69e2e", "#e53e3e", "#805ad5"]
+    
+    for i, (m, name, c) in enumerate(zip(metrics, metric_names, colors)):
+        if m in df.columns:
+            ax.bar(x + (i - 2) * width, df[m], width, label=name, color=c, edgecolor="black", alpha=0.85)
+            
+    ax.set_ylabel("Score", fontsize=12, fontweight="bold")
+    ax.set_title("Ablation Study: Quantitative Comparison of Pipeline Stages (Held-Out Test Set)", fontsize=14, fontweight="bold")
+    ax.set_xticks(x)
+    ax.set_xticklabels(cond_labels, rotation=15, ha="right", fontsize=10, fontweight="bold")
+    ax.set_ylim(0, 1.05)
+    ax.legend(loc="upper left", framealpha=0.9)
+    _save(fig, "15_ablation_study_comparison.png")
+
+
 def main():
     print("[Visualization] Rendering figures from pipeline outputs...")
     manifest = pd.read_csv(OUT / "dataset_manifest.csv")
@@ -433,6 +463,7 @@ def main():
     fig_bayesian(feat, bn_res)
     fig_bayes_evidence_queries()
     fig_mrf(manifest, comp)
+    fig_ablation_study()
     print(f"[Visualization] Done -> {FIG}")
 
 
