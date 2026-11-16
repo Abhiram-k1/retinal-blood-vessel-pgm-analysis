@@ -197,6 +197,13 @@ To achieve state-of-the-art research quality and eliminate mathematical inconsis
 
 ---
 
+### Step 16: Interactive Visual Dashboard & Figure Explorer
+* **What:** An intuitive, single-page results dashboard (`pipeline_viewer.html` / `dashboard.py`) with 6 interactive tabs: Executive Dashboard, Pipeline Stages (1–8), Deep Learning & Ablation, Vascular Graphs & Fractals, Bayesian & MRF Models, and the Interactive Figure Explorer.
+* **Why:** Enables clinicians, researchers, and reviewers to interactively view high-resolution figures, inspect confusion matrices, explore ablation tables, and analyze patient-specific vascular topologies without reading raw code.
+* **How:** Run `python dashboard.py` in the project root to automatically launch a local HTTP server and view the dashboard in any browser at `http://localhost:8080/index.html`.
+
+---
+
 ## 4. Verification and Anti-Fabrication Principles
 
 In strict accordance with scientific integrity standards:

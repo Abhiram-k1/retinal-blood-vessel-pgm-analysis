@@ -200,6 +200,12 @@ Execute the complete end-to-end unified research pipeline across all 28 retinal 
 python -m src.pipeline
 ```
 
+Launch the interactive results dashboard on your screen:
+```bash
+python dashboard.py
+```
+*(Or open `outputs/figures/index.html` directly in any web browser).*
+
 Individual modules can be tested independently:
 * **Deep Learning Training & Evaluation:** `python -m src.deep_learning`
 * **MRA Multi-Scale Gabor Extraction:** `python -m src.multiscale_features`

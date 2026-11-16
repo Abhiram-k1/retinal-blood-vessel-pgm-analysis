@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retinal Vascular Network Analysis - Interactive Results Dashboard</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    .tab-btn.active {
+      background-color: var(--primary, #3b82f6);
+      color: #ffffff;
+      border-color: var(--primary, #3b82f6);
+    }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-100 antialiased p-6 font-sans">
+  <div class="max-w-6xl mx-auto space-y-6">
+    
+    <!-- Header -->
+    <header class="bg-slate-800 border border-slate-700 rounded-2xl p-6 shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div>
+        <div class="flex items-center gap-2 mb-1">
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">100% Verified</span>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-500/20 text-blue-400 border border-blue-500/30">CHASE_DB1 (28 Images)</span>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-400 border border-purple-500/30">PGM + Deep Learning</span>
+        </div>
+        <h1 class="text-2xl md:text-3xl font-bold tracking-tight text-white">Probabilistic & Mathematical Analysis of Retinal Blood-Vessel Networks</h1>
+        <p class="text-sm text-slate-400 mt-1">Multi-Scale Gabor MRA • Neural Receptive Fields • Topological Graphs • Directed BNs • Undirected MRFs</p>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="text-right">
+          <div class="text-xs text-slate-400">Pipeline Status</div>
+          <div class="text-sm font-semibold text-emerald-400">Complete (Code 0)</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Key Metrics Ribbon -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-slate-800/80 border border-slate-700/80 rounded-xl p-4 shadow-sm">
+        <div class="text-xs font-medium text-slate-400">Deep Learning Recall</div>
+        <div class="text-2xl font-bold text-blue-400 mt-1">86.46%</div>
+        <div class="text-xs text-emerald-400 mt-1">+8.29% over baseline</div>
+      </div>
+      <div class="bg-slate-800/80 border border-slate-700/80 rounded-xl p-4 shadow-sm">
+        <div class="text-xs font-medium text-slate-400">Graph Fragmentation</div>
+        <div class="text-2xl font-bold text-emerald-400 mt-1">354.6 comps</div>
+        <div class="text-xs text-emerald-400 mt-1">-52.8% via gap bridging</div>
+      </div>
+      <div class="bg-slate-800/80 border border-slate-700/80 rounded-xl p-4 shadow-sm">
+        <div class="text-xs font-medium text-slate-400">Mean Branch Angle</div>
+        <div class="text-2xl font-bold text-amber-400 mt-1">60.3° ± 3.4°</div>
+        <div class="text-xs text-slate-400 mt-1">Murray's law aligned</div>
+      </div>
+      <div class="bg-slate-800/80 border border-slate-700/80 rounded-xl p-4 shadow-sm">
+        <div class="text-xs font-medium text-slate-400">Bayesian Factorization</div>
+        <div class="text-2xl font-bold text-purple-400 mt-1">∑ P = 1.000000</div>
+        <div class="text-xs text-slate-400 mt-1">Non-circular target S</div>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="flex flex-wrap gap-2 border-b border-slate-700 pb-2">
+      <button onclick="setTab('dashboard')" id="btn-dashboard" class="tab-btn active px-4 py-2 rounded-lg text-sm font-medium border border-slate-700 bg-slate-800 hover:bg-slate-700 transition">
+        Executive Dashboard
+      </button>
+      <button onclick="setTab('stages')" id="btn-stages" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium border border-slate-700 bg-slate-800 hover:bg-slate-700 transition">
+        Pipeline Stages (1-8)
+      </button>
+      <button onclick="setTab('ablation')" id="btn-ablation" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium border border-slate-700 bg-slate-800 hover:bg-slate-700 transition">
+        Deep Learning & Ablation
+      </button>
+      <button onclick="setTab('graph')" id="btn-graph" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium border border-slate-700 bg-slate-800 hover:bg-slate-700 transition">
+        Vascular Graphs & Fractals
+      </button>
+      <button onclick="setTab('probabilistic')" id="btn-probabilistic" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium border border-slate-700 bg-slate-800 hover:bg-slate-700 transition">
+        Bayesian & MRF Models
+      </button>
+      <button onclick="setTab('gallery')" id="btn-gallery" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium border border-slate-700 bg-slate-800 hover:bg-slate-700 transition">
+        Figure Explorer (All 16 Figures)
+      </button>
+    </div>
+
+    <!-- Tab 1: Executive Dashboard -->
+    <section id="tab-dashboard" class="space-y-4">
+      <div class="bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow-lg">
+        <h2 class="text-lg font-bold text-white mb-2">Master Results Dashboard</h2>
+        <p class="text-sm text-slate-400 mb-4">Unified summary of segmentation validation, graph topology, fractal scaling, and Bayesian inference.</p>
+        <div class="rounded-xl overflow-hidden border border-slate-700 bg-slate-950">
+          <img src="./00_results_dashboard.png" alt="Results Dashboard" class="w-full h-auto">
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 2: Pipeline Stages -->
+    <section id="tab-stages" class="space-y-6 hidden">
+      <div class="bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow-lg">
+        <h2 class="text-lg font-bold text-white mb-2">End-to-End Pipeline Transformation Chain</h2>
+        <p class="text-sm text-slate-400 mb-4">Transformation from raw fundus photography to CLAHE preprocessing, binary mask, difference map, skeleton, and nodes.</p>
+        <div class="rounded-xl overflow-hidden border border-slate-700 bg-slate-950 mb-6">
+          <img src="./01_pipeline_stages.png" alt="Pipeline Stages" class="w-full h-auto">
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="border border-slate-700 rounded-xl p-4 bg-slate-850">
+            <h3 class="text-sm font-semibold text-slate-200 mb-2">Test Set Error Gallery (TP / FP / FN)</h3>
+            <img src="./04_test_error_gallery.png" alt="Error Gallery" class="rounded-lg w-full">
+          </div>
+          <div class="border border-slate-700 rounded-xl p-4 bg-slate-850">
+            <h3 class="text-sm font-semibold text-slate-200 mb-2">Skeleton & Node Detection Gallery</h3>
+            <img src="./05_skeleton_nodes_gallery.png" alt="Skeleton Nodes Gallery" class="rounded-lg w-full">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 3: Deep Learning & Ablation -->
+    <section id="tab-ablation" class="space-y-6 hidden">
+      <div class="bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow-lg">
+        <h2 class="text-lg font-bold text-white mb-2">5-Condition Quantitative Ablation Study</h2>
+        <p class="text-sm text-slate-400 mb-4">Isolating the contributions of the Morphological Baseline, MRA Gabor filterbank, MRF spatial refinement, and Deep Learning.</p>
+        
+        <div class="rounded-xl overflow-hidden border border-slate-700 bg-slate-950 mb-6">
+          <img src="./15_ablation_study_comparison.png" alt="Ablation Study Comparison" class="w-full h-auto">
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-slate-700">
+          <table class="w-full text-left text-sm text-slate-300">
+            <thead class="bg-slate-900 text-xs uppercase text-slate-400 border-b border-slate-700">
+              <tr>
+                <th class="px-4 py-3">Condition</th>
+                <th class="px-4 py-3">Accuracy</th>
+                <th class="px-4 py-3">Precision</th>
+                <th class="px-4 py-3">Recall (Sens)</th>
+                <th class="px-4 py-3">Specificity</th>
+                <th class="px-4 py-3">F1-Score</th>
+                <th class="px-4 py-3">Dice Coeff</th>
+                <th class="px-4 py-3">IoU (Jaccard)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-700">
+              <tr class="hover:bg-slate-750">
+                <td class="px-4 py-3 font-medium text-slate-200">A: Morphological Baseline</td>
+                <td class="px-4 py-3">0.8904</td>
+                <td class="px-4 py-3">0.4464</td>
+                <td class="px-4 py-3">0.7817</td>
+                <td class="px-4 py-3">0.9011</td>
+                <td class="px-4 py-3">0.5670</td>
+                <td class="px-4 py-3">0.5670</td>
+                <td class="px-4 py-3">0.3965</td>
+              </tr>
+              <tr class="hover:bg-slate-750">
+                <td class="px-4 py-3 font-medium text-slate-200">B: MRA (Multi-Scale Gabor)</td>
+                <td class="px-4 py-3">0.8470</td>
+                <td class="px-4 py-3">0.3593</td>
+                <td class="px-4 py-3">0.8447</td>
+                <td class="px-4 py-3">0.8468</td>
+                <td class="px-4 py-3">0.5032</td>
+                <td class="px-4 py-3">0.5032</td>
+                <td class="px-4 py-3">0.3370</td>
+              </tr>
+              <tr class="hover:bg-slate-750">
+                <td class="px-4 py-3 font-medium text-slate-200">C: MRF Spatial Refinement</td>
+                <td class="px-4 py-3">0.8588</td>
+                <td class="px-4 py-3">0.4042</td>
+                <td class="px-4 py-3">0.7992</td>
+                <td class="px-4 py-3">0.8640</td>
+                <td class="px-4 py-3">0.5263</td>
+                <td class="px-4 py-3">0.5263</td>
+                <td class="px-4 py-3">0.3606</td>
+              </tr>
+              <tr class="bg-blue-900/30 font-semibold text-blue-300 hover:bg-blue-900/40">
+                <td class="px-4 py-3">D: Deep Learning Model</td>
+                <td class="px-4 py-3">0.8768</td>
+                <td class="px-4 py-3">0.4260</td>
+                <td class="px-4 py-3 text-emerald-400">0.8646</td>
+                <td class="px-4 py-3">0.8779</td>
+                <td class="px-4 py-3 text-blue-400">0.5673</td>
+                <td class="px-4 py-3 text-blue-400">0.5673</td>
+                <td class="px-4 py-3 text-blue-400">0.3974</td>
+              </tr>
+              <tr class="hover:bg-slate-750">
+                <td class="px-4 py-3 font-medium text-slate-200">E: Full System (DL + MRF)</td>
+                <td class="px-4 py-3">0.8053</td>
+                <td class="px-4 py-3">0.3213</td>
+                <td class="px-4 py-3">0.8588</td>
+                <td class="px-4 py-3">0.7994</td>
+                <td class="px-4 py-3">0.4627</td>
+                <td class="px-4 py-3">0.4627</td>
+                <td class="px-4 py-3">0.3036</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 4: Vascular Graphs -->
+    <section id="tab-graph" class="space-y-6 hidden">
+      <div class="bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow-lg">
+        <h2 class="text-lg font-bold text-white mb-2">Vascular Network Graph Construction & Fractals</h2>
+        <p class="text-sm text-slate-400 mb-4">Topological representation G=(V,E) with node degree distributions and multi-scale box-counting dimension.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+          <div class="border border-slate-700 rounded-xl p-4 bg-slate-850">
+            <h3 class="text-sm font-semibold text-slate-200 mb-2">NetworkX Graph Overlay & Degree Profile</h3>
+            <img src="./06_graph_overlay_degree_components.png" alt="Graph Overlay" class="rounded-lg w-full">
+          </div>
+          <div class="border border-slate-700 rounded-xl p-4 bg-slate-850">
+            <h3 class="text-sm font-semibold text-slate-200 mb-2">Multi-Scale Box-Counting Fractal Dimension</h3>
+            <img src="./08_fractal_dimension.png" alt="Fractal Dimension" class="rounded-lg w-full">
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="border border-slate-700 rounded-xl p-4 bg-slate-850">
+            <h3 class="text-sm font-semibold text-slate-200 mb-2">Vascular Geometric Feature Distributions</h3>
+            <img src="./07_feature_distributions.png" alt="Feature Distributions" class="rounded-lg w-full">
+          </div>
+          <div class="border border-slate-700 rounded-xl p-4 bg-slate-850">
+            <h3 class="text-sm font-semibold text-slate-200 mb-2">Complete Pearson Correlation Matrix</h3>
+            <img src="./10_correlation_full.png" alt="Correlation Matrix" class="rounded-lg w-full">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 5: Probabilistic Models -->
+    <section id="tab-probabilistic" class="space-y-6 hidden">
+      <div class="bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow-lg">
+        <h2 class="text-lg font-bold text-white mb-2">Directed Bayesian Network & Undirected MRF Modeling</h2>
+        <p class="text-sm text-slate-400 mb-4">Directed Bayesian Network DAG with learned CPTs alongside ICM spatial energy minimization.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+          <div class="border border-slate-700 rounded-xl p-4 bg-slate-850">
+            <h3 class="text-sm font-semibold text-slate-200 mb-2">Bayesian Network DAG Structure & Learned CPTs</h3>
+            <img src="./11_bayesian_network.png" alt="Bayesian Network DAG" class="rounded-lg w-full">
+          </div>
+          <div class="border border-slate-700 rounded-xl p-4 bg-slate-850">
+            <h3 class="text-sm font-semibold text-slate-200 mb-2">Exact Variable Elimination Posterior Inference</h3>
+            <img src="./12_bayes_evidence_queries.png" alt="Bayes Evidence Queries" class="rounded-lg w-full">
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="border border-slate-700 rounded-xl p-4 bg-slate-850">
+            <h3 class="text-sm font-semibold text-slate-200 mb-2">MRF Energy Reduction & Quantitative Comparison</h3>
+            <img src="./13_mrf_vs_baseline_metrics.png" alt="MRF Comparison Metrics" class="rounded-lg w-full">
+          </div>
+          <div class="border border-slate-700 rounded-xl p-4 bg-slate-850">
+            <h3 class="text-sm font-semibold text-slate-200 mb-2">MRF vs Baseline Visual Segmentation</h3>
+            <img src="./14_mrf_visual_comparison.png" alt="MRF Visual Comparison" class="rounded-lg w-full">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 6: Interactive Figure Explorer -->
+    <section id="tab-gallery" class="space-y-6 hidden">
+      <div class="bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow-lg">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+          <div>
+            <h2 class="text-lg font-bold text-white">Interactive Figure Explorer</h2>
+            <p class="text-sm text-slate-400">Select any of the 16 publication figures to inspect in full resolution.</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <label for="figure-selector" class="text-xs font-semibold text-slate-300">Choose Figure:</label>
+            <select id="figure-selector" onchange="updateExplorer(this.value)" class="bg-slate-900 border border-slate-600 rounded-lg px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-blue-500">
+              <option value="00_results_dashboard.png">Fig 00: Master Results Dashboard</option>
+              <option value="01_pipeline_stages.png">Fig 01: End-to-End Pipeline Stages</option>
+              <option value="02_segmentation_metrics.png">Fig 02: Segmentation Performance Metrics</option>
+              <option value="03_precision_recall_observers.png">Fig 03: Precision-Recall & Inter-Observer Agreement</option>
+              <option value="04_test_error_gallery.png">Fig 04: Test Set Error Gallery (TP / FP / FN)</option>
+              <option value="05_skeleton_nodes_gallery.png">Fig 05: Skeleton & Node Junction Gallery</option>
+              <option value="06_graph_overlay_degree_components.png">Fig 06: Graph Overlay & Degree Profile</option>
+              <option value="07_feature_distributions.png">Fig 07: Feature Distributions & Histograms</option>
+              <option value="08_fractal_dimension.png">Fig 08: Box-Counting Fractal Dimension Log-Log</option>
+              <option value="09_feature_relationships.png">Fig 09: Bivariate Feature Scatter & Regressions</option>
+              <option value="10_correlation_full.png">Fig 10: Complete Pearson Correlation Heatmap</option>
+              <option value="11_bayesian_network.png">Fig 11: Bayesian Network DAG Structure & CPTs</option>
+              <option value="12_bayes_evidence_queries.png">Fig 12: Posterior Inference Under Clinical Scenarios</option>
+              <option value="13_mrf_vs_baseline_metrics.png">Fig 13: MRF Energy Reduction & Comparison Metrics</option>
+              <option value="14_mrf_visual_comparison.png">Fig 14: Baseline vs. MRF Visual Segmentation</option>
+              <option value="15_ablation_study_comparison.png" selected>Fig 15: 5-Condition Quantitative Ablation Study</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="rounded-xl overflow-hidden border border-slate-700 bg-slate-950 p-2">
+          <img id="explorer-image" src="./15_ablation_study_comparison.png" alt="Selected Publication Figure" class="w-full h-auto rounded-lg">
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-xs text-slate-500 py-4 border-t border-slate-800">
+      Retinal Blood-Vessel Analysis System • Verified Leakage-Free Execution on CHASE_DB1 • Anti-Fabrication Standards Compliant
+    </footer>
+
+  </div>
+
+  <script>
+    function setTab(tabId) {
+      const tabs = ['dashboard', 'stages', 'ablation', 'graph', 'probabilistic', 'gallery'];
+      tabs.forEach(t => {
+        const el = document.getElementById('tab-' + t);
+        const btn = document.getElementById('btn-' + t);
+        if (el) el.classList.add('hidden');
+        if (btn) btn.classList.remove('active');
+      });
+      const activeEl = document.getElementById('tab-' + tabId);
+      const activeBtn = document.getElementById('btn-' + tabId);
+      if (activeEl) activeEl.classList.remove('hidden');
+      if (activeBtn) activeBtn.classList.add('active');
+    }
+
+    function updateExplorer(val) {
+      const img = document.getElementById('explorer-image');
+      if (img) {
+        img.src = './' + val;
+      }
+    }
+  </script>
+</body>
+</html>
