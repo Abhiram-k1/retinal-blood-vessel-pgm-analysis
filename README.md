@@ -140,6 +140,9 @@ $$P(S \mid \mathbf{e}) = \frac{\sum_{\mathbf{X} \setminus \{S, \mathbf{e}\}} P(B
 ├── requirements.txt                # Exact dependency lockfile
 ├── PLAN_AND_PROGRESS.md            # Comprehensive milestone tracker & bug resolution log
 ├── README.md                       # Complete project specification and empirical results
+├── prep.md                         # Presentation & defense master prep guide (active recall, viva Q&A)
+├── pseudo.md                       # Plain-English conceptual guide for non-specialists
+├── dashboard.py                    # Interactive results web dashboard launcher
 ├── new/chase/                      # CHASE_DB1 retinal database (28 images)
 │   ├── test/test/                  # 8 held-out test images, masks, and annotations
 │   └── training/training/          # 20 training images, masks, and annotations
@@ -221,3 +224,12 @@ Individual modules can be tested independently:
 * **Zero Hardcoded Metrics:** Every single metric (node count, tortuosity index, fractal slope, CPT entry, posterior probability, MRF energy, DL prediction) is calculated dynamically from the processed CHASE_DB1 retinal imagery.
 * **Leakage-Free Validation:** The 8 held-out test subjects (`11L` to `14R`) are strictly isolated from parameter estimation, DL training, threshold tuning, and CPT learning.
 * **Axiomatic Consistency:** Joint Bayesian factorization sum strictly equals $1.000000$, and MRF energy reductions are verified via continuous ICM histories.
+
+---
+
+## 📖 Primary Documentation & Guides
+
+* **[prep.md](prep.md):** Complete presentation & viva defense master guide (active recall drills, professor Q&A, slide script, formula cheat sheet).
+* **[pseudo.md](pseudo.md):** Plain-English intuitive walkthrough of all 16 pipeline stages for non-specialists.
+* **[RESEARCH_REPORT.md](RESEARCH_REPORT.md):** Formal academic research manuscript with derivations, ablation tables, and clinical biomarker analysis.
+* **[PLAN_AND_PROGRESS.md](PLAN_AND_PROGRESS.md):** Milestone audit log detailing all 5 critical scientific bug fixes and implementation status.
